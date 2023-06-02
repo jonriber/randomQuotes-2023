@@ -2,7 +2,7 @@ import './App.css'
 import useFetchData from './customHooks/useFetchData'
 
 function App() {
-  const { data, isLoading, error} = useFetchData()
+  const { data, isLoading, error} = useFetchData("https://api.quotable.io/random")
 
   return (
     <>
