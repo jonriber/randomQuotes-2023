@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 const useFetchData = (url) => {
-    const [data,setData] = useState(null)
+    const [data,setData] = useState([])
     const [isLoading, setIsLoading] = useState(null)
     const [error,setError] = useState(null)
     const fetchData = async() => {
@@ -9,7 +9,7 @@ const useFetchData = (url) => {
         try{
             const response = await fetch(url)
             const jsonData = await response.json()
-            setData((jsonData))
+            setData([...data,jsonData])
             setIsLoading(false)
         }catch (error){
             setError(error)
