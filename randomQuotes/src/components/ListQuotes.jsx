@@ -1,8 +1,12 @@
+import "../style/listQuotes.css"
+
 /* eslint-disable react/prop-types */
 const ListQuotes = ({children}) =>{
     return(
         <>
-            {children}
+            <div className="list-container">
+                {children}
+            </div>
         </>
     )
 }

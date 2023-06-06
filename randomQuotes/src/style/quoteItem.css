@@ -1,0 +1,18 @@
+.quoteItem{
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* align-items: start; */
+}
+
+.quoteItem p{
+    color:white
+}
+
+.quoteItem h3{
+    color: white;
+    display: block;
+    min-width: 30%;
+
+}

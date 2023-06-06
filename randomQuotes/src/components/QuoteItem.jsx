@@ -1,8 +1,14 @@
-const QuoteItem = () =>{
+
+import "../style/quoteItem.css"
+/* eslint-disable react/prop-types */
+
+const QuoteItem = ({author,content}) =>{
+    console.log("author:",author)
     return(
-        <>
-            <h3>item</h3>
-        </>
+        <div className="quoteItem">
+            <h3>Author:{author}</h3>
+            <p>{content}</p>
+        </div>
     )
 }
 
