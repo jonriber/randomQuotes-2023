@@ -4,9 +4,10 @@ import QuoteItem from './components/QuoteItem';
 import useFetchData from './customHooks/useFetchData'
 
 function App() {
-  const { data, isLoading, error} = useFetchData("https://api.quotable.io/random");
+  // const [newQuote, setNewQuote] = useState(false)
+  const { data, isLoading, error,fetchData} = useFetchData("https://api.quotable.io/random");
   const [currentQuote,...storedData] = data;
-  const listContent = storedData.length>1? storedData.map(item => {
+  const listContent = storedData.length>=1? storedData.map(item => {
     return(
       <>
         <QuoteItem {...item}/>
@@ -26,16 +27,17 @@ function App() {
   return (
     <>
       <header>
-        <h1>Daily Random Quote</h1>
+        <h1>Daily Quotes</h1>
       </header>
       <main>
         {isLoading && <h2>Loading....</h2>}
-        <div>
+        <div style={{display:'flex',flexDirection:"row", marginBottom:"50px"}}>
           {currentQuote && 
             <div className='current-quote'>
               <q>{currentQuote.content}</q> 
               <address>{currentQuote.author}</address>
             </div>}
+          <button onClick={fetchData}>Get me a new one!</button>
         </div>
         <div>
           <ListQuotes>
