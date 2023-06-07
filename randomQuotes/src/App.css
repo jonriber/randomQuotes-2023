@@ -14,3 +14,8 @@ h1{
   font-size:xx-large;
 }
 
+.current-quote address{
+  color: #191970;
+  font-size: larger;
+}
+

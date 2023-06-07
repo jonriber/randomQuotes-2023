@@ -18,7 +18,7 @@ function App() {
     return(
       <>
         <div>
-          <h1>ERRO!</h1>
+          <h1>An error occured!</h1>
         </div>
       </>
     )
@@ -34,9 +34,8 @@ function App() {
           {currentQuote && 
             <div className='current-quote'>
               <q>{currentQuote.content}</q> 
-              <h2>Author:{currentQuote.author}</h2>
+              <address>{currentQuote.author}</address>
             </div>}
-              
         </div>
         <div>
           <ListQuotes>
@@ -44,7 +43,9 @@ function App() {
           </ListQuotes>
         </div>
       </main>
-      <footer></footer>
+      <footer>
+        @Jonatas Ribeiro. 2023.
+      </footer>
     </>
   )
 }
