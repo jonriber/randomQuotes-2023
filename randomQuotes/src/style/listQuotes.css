@@ -3,7 +3,8 @@
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    border: solid white;
+    border: solid #191970;
     border-radius: 15px;
     min-height: 100vh;
+    background-color: #f5f5dc;
 }

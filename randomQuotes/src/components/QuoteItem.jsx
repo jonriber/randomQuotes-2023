@@ -5,10 +5,13 @@ import "../style/quoteItem.css"
 const QuoteItem = ({author,content}) =>{
     console.log("author:",author)
     return(
+        <>
         <div className="quoteItem">
-            <h3>Author:{author}</h3>
-            <p>{content}</p>
+            <h3>{author}</h3>
+            <q>{content}</q>
         </div>
+        <hr className="rounded"></hr>
+        </>
     )
 }
 

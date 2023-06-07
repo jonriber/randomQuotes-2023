@@ -2,6 +2,15 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  text-align: start;
+}
+
+h1{
+  color: #191970;
+}
+
+.current-quote q{
+  color: #fa8072;
+  font-size:xx-large;
 }
 

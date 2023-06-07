@@ -6,13 +6,14 @@ import useFetchData from './customHooks/useFetchData'
 function App() {
   const { data, isLoading, error} = useFetchData("https://api.quotable.io/random");
   const [currentQuote,...storedData] = data;
-  const listContent = storedData.map(item => {
+  const listContent = storedData.length>1? storedData.map(item => {
     return(
       <>
         <QuoteItem {...item}/>
       </>
     )
-  })
+  }):null
+
   if(error){
     return(
       <>
@@ -25,15 +26,18 @@ function App() {
   return (
     <>
       <header>
-        <h1>Random Quotes</h1>
+        <h1>Daily Random Quote</h1>
       </header>
       <main>
-        {isLoading ? <h1>Loading....</h1>:
+        {isLoading && <h2>Loading....</h2>}
         <div>
-          
-              <h1>{currentQuote.content}</h1>
+          {currentQuote && 
+            <div className='current-quote'>
+              <q>{currentQuote.content}</q> 
               <h2>Author:{currentQuote.author}</h2>
-        </div>}
+            </div>}
+              
+        </div>
         <div>
           <ListQuotes>
             {listContent}

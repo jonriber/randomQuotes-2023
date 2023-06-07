@@ -3,16 +3,25 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* align-items: start; */
+    align-items: baseline;
 }
 
-.quoteItem p{
-    color:white
+.quoteItem q{
+    color:#fa8072;
+    width:100%;
+    /* border:solid black */
 }
 
 .quoteItem h3{
-    color: white;
+    color: #191970;
     display: block;
     min-width: 30%;
+    width:100%
 
 }
+
+.rounded {
+    border-top: 1px solid #191970;
+    border-radius: 5px;
+    width: 80%;
+  }
